@@ -35,6 +35,16 @@ public class CameraMovement : MonoBehaviour
             deltaMovement += Vector3.right * movementScalar;
         }
 
+        if (Input.GetKey(KeyCode.Q))
+        {
+
+            deltaMovement += Vector3.up * movementScalar;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+
+            deltaMovement += Vector3.down * movementScalar;
+        }
 
         transform.position += deltaMovement;
         deltaMovement = new Vector3(0, 0, 0);
