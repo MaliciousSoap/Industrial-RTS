@@ -1,0 +1,24 @@
+{
+  "0,0": {
+    "terrain": "grass",
+    "building": "mine"
+  },
+  "0,1": {
+    "terrain": "grass",
+    "building": "mine"
+  },
+  "0,-1": {
+    "terrain": "grass",
+    "building": "mine"
+  },
+  "1,0": {
+    "terrain": "grass",
+    "building": "mine"
+  },
+  //negative x after
+  "-1,0": {
+    "terrain": "grass",
+    "building": "mine"
+  }
+
+}
