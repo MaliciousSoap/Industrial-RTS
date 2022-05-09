@@ -5,8 +5,8 @@ using UnityEngine;
 public class Select : MonoBehaviour
 {
     private Color initialColor;
-    private Color hoverColorMod = new Color(100, 100, 100, 0);
-    private Color selectColorMod = new Color(13, 13, 13, 0);
+    public Color hoverColorMod = new Color(100, 100, 100, 0);
+    public Color selectColorMod = new Color(13, 13, 13, 0);
 
     private bool selected = false;
     private bool clicked = false;
