@@ -8,7 +8,6 @@ public class Select : MonoBehaviour
     public Color hoverColorMod = new Color(100, 100, 100, 0);
     public Color selectColorMod = new Color(13, 13, 13, 0);
 
-    private bool selected = false;
     private bool clicked = false;
 
     // Start is called before the first frame update

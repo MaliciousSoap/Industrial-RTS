@@ -1,5 +1,7 @@
 {
-  "0,0": {
+  //Start Top Layer From Left
+  //x,y
+  "-1,1": {
     "terrain": "grass",
     "building": "mine"
   },
@@ -7,7 +9,11 @@
     "terrain": "grass",
     "building": "mine"
   },
-  "0,-1": {
+  "-1,0": {
+    "terrain": "grass",
+    "building": "mine"
+  },
+  "0,0": {
     "terrain": "grass",
     "building": "mine"
   },
@@ -16,7 +22,7 @@
     "building": "mine"
   },
   //negative x after
-  "-1,0": {
+  "0,-1": {
     "terrain": "grass",
     "building": "mine"
   }
