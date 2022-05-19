@@ -8,17 +8,15 @@ using System;
 public class GenerateMap : MonoBehaviour
 {
     [Serializable]
-    public class Cell
+    public class JSONCell
     {
-        public string id;
-        public string terrain;
-        public string building;
+        public string id, terrain, building;
     }
 
     [Serializable]
     public class MapData
     {
-        public Cell[] CellData;
+        public JSONCell[] CellData;
     }
 
     private TextAsset file;
@@ -27,14 +25,23 @@ public class GenerateMap : MonoBehaviour
     {
     }
 
+    public class UnityCell
+    {
+        public int centerX, centerY, centerZ;
+        public string terrain, building, unit;
+    }
+
     private void Awake()
     {
+        UnityCell[] UnityMapData;
+
+        //--
         file = Resources.Load("MapData") as TextAsset;
         print(file.text);
         MapData json = JsonUtility.FromJson<MapData>(file.text);
         Debug.Log(json.CellData);
 
-        foreach (Cell cell in json.CellData)
+        foreach (JSONCell cell in json.CellData)
         {
             print(cell.id);
         }
