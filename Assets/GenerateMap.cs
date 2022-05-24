@@ -10,7 +10,7 @@ public class GenerateMap : MonoBehaviour
     public GameObject Map;
     public GameObject MapExample;
 
-    public List<UnityCell> MapData = new List<UnityCell>();
+    public Dictionary<string,UnityCell> MapData = new Dictionary<string, UnityCell>();
 
     [Serializable]
     public class JSONCell
@@ -71,27 +71,31 @@ public class GenerateMap : MonoBehaviour
 
         foreach (JSONCell cell in json.JSONCellData)
         {
-            MapData.Add(new UnityCell(cell.id, cell.terrain, cell.building));
+            MapData[cell.id] = (new UnityCell(cell.id, cell.terrain, cell.building));
             //print("added");
             //print(MapData[0].building);
         }
-
-        bool childExists = false;
+         
         foreach (Transform child in Map.transform)
         {
-            foreach (UnityCell cell in MapData)
+            //Cull the nonexistent tiles
+            try
             {
-                if (cell.id == "-69,-69")
+                if(MapData[child.name] != null)
                 {
-                    childExists = true;
+
+                    print("child " + child.name + " Is present in MapData");
+
                 }
             }
-            print(child.name);
+            catch (KeyNotFoundException)
+            {
+                //print("except " + e);
+                print("child " + child.name + " Is not in MapData");
+                GameObject.DestroyImmediate(child.gameObject);
+            }
         }
-        if (childExists)
-        {
-            print("child does exist");
-        }
+        
     }
 
     // Update is called once per frame

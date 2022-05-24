@@ -1,7 +1,6 @@
 {
   "JSONCellData": [
 
-
     {
       "id": "-1,0",
       "terrain": "plains",
@@ -15,32 +14,21 @@
     },
 
     {
-
       "id": "-1,2",
       "terrain": "plains",
       "building": "mine"
     },
 
     {
-
-      "id": "0,0",
-      "terrain": "plains",
-      "building": "mine"
-    },
-
-    {
-
       "id": "1,0",
       "terrain": "plains",
       "building": "mine"
     },
 
     {
-
       "id": "1,1",
       "terrain": "plains",
       "building": "mine"
     }
   ]
-
 }
