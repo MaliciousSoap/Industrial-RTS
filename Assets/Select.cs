@@ -28,7 +28,7 @@ public class Select : MonoBehaviour
     {
         clicked = !clicked;
         gameObject.GetComponent<Renderer>().material.SetColor("_Color", initialColor - selectColorMod);
-        print("cliquer");
+         
     }
 
     private void OnMouseDown()

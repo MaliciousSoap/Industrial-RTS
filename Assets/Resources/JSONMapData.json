@@ -29,6 +29,17 @@
       "id": "1,1",
       "terrain": "plains",
       "building": "mine"
+    },
+    {
+      "id": "0,1",
+      "terrain": "plains",
+      "building": "mine"
+    },
+    {
+      "id": "0,0",
+      "terrain": "plains",
+      "building": "mine"
     }
+
   ]
 }
